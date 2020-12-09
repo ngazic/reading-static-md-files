@@ -6,7 +6,7 @@
         <li @click="showBye">render Bye.md file</li>
         <li @click="showReadme">show README.md file of this Git repo</li>
       </ul>
-      <h2>Content of Mardown:</h2>
+      <h2>Content of Markdown file:</h2>
       <div v-html="md"></div>
     </div>
   </div>
