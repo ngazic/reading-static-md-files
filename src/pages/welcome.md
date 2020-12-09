@@ -5,6 +5,6 @@ it's our plaeasure that you have visited our site
 
 [search google](https://google.com)
 
-<div style="background: red;"> This is something important</div>
+<div style="background: red;"> This is something with inline style</div>
 
-<p class="my-paragraph">Thi is class based paragraph </p>
+<p class="my-paragraph">Thi is class styled paragraph </p>

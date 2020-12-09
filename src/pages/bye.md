@@ -6,4 +6,4 @@ Have a nice day :)
 
 [search google](https://google.com)
 
-<div style="background: black;color: white;"> This is inverted</div>
+<div style="background: black;color: white;"> This is done with inline stye</div>
