@@ -24,6 +24,6 @@ npm run lint
  
 #### [raw-loader](https://www.npmjs.com/package/raw-loaderlink)
 
-Configuration of Webpack to use this loader is required (see vue.config.js)
+Configuration of Webpack to use this loader is required (see vue.config.js and shims-vue.d.ts)
 
 #### [remarkable](https://www.npmjs.com/package/remarkable)
