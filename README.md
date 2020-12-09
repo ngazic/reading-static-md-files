@@ -1,5 +1,6 @@
 # reading-static-md-files
 
+Simple app for reading static .md (markdown) pages and rendering them in component as raw HTML. 
 ## Project setup
 ```
 npm install
@@ -19,6 +20,10 @@ npm run build
 ```
 npm run lint
 ```
+### Dependencies
+ 
+#### [raw-loader](https://www.npmjs.com/package/raw-loaderlink)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Configuration of Webpack to use this loader is required (see vue.config.js)
+
+#### [remarkable](https://www.npmjs.com/package/remarkable)

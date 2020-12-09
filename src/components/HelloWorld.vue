@@ -14,25 +14,28 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import md from "@/reamarkable.ts";
+import welcome from "@/pages/welcome.md";
+import bye from "@/pages/bye.md";
+
 @Component
 export default class HelloWorld extends Vue {
   md = "";
-  get myHtml() {
-    return this.md;
-  }
+
   async showWelcome() {
     console.log("welcome");
-    // const file = await import("@/static-files/welcome.md");
-    this.md = md.render("# custom h1 from markdown");
+    this.md = md.render(welcome);
+    console.log(this.md);
   }
-  showBye() {
-    console.log("bye");
+  async showBye() {
+    console.log("welcome");
+    this.md = md.render(bye);
+    console.log(this.md);
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss">
 h3 {
   margin: 40px 0 0;
   background: yellow;
@@ -51,5 +54,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.my-paragraph {
+  background: green;
+  font-size: 16px;
 }
 </style>
