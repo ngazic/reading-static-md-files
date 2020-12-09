@@ -4,6 +4,7 @@
       <ul>
         <li @click="showWelcome">render Welcome.md file</li>
         <li @click="showBye">render Bye.md file</li>
+        <li @click="showReadme">show README.md file of this Git repo</li>
       </ul>
       <h2>Content of Mardown:</h2>
       <div v-html="md"></div>
@@ -21,25 +22,32 @@ import bye from "@/pages/bye.md";
 export default class HelloWorld extends Vue {
   md = "";
 
-  async showWelcome() {
+  showWelcome() {
     console.log("welcome");
     this.md = md.render(welcome);
     console.log(this.md);
   }
-  async showBye() {
+  showBye() {
     console.log("welcome");
     this.md = md.render(bye);
     console.log(this.md);
+  }
+
+  async showReadme() {
+    console.log("show readme");
+    const request = await fetch(
+      "https://raw.githubusercontent.com/ngazic/reading-static-md-files/master/README.md"
+    );
+    console.log(request);
+    const file = await request.text();
+    console.log(file);
+    this.md = md.render(file);
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-h3 {
-  margin: 40px 0 0;
-  background: yellow;
-}
 ul {
   list-style-type: none;
   padding: 0;
