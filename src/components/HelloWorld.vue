@@ -2,8 +2,8 @@
   <div class="hello">
     <div>
       <ul>
-        <li @click="showWelcome">render Welcome.md file</li>
-        <li @click="showBye">render Bye.md file</li>
+        <li @click="showWelcome">render Welcome.md file using "remarkable"</li>
+        <li @click="showBye">render Bye.md file usning "marked"</li>
         <li @click="showReadme">show README.md file of this Git repo</li>
       </ul>
       <h2>Content of Markdown file:</h2>
@@ -14,7 +14,8 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import md from "@/reamarkable.ts";
+import marked from "marked";
+import remarkable from "@/reamarkable.ts";
 import welcome from "@/pages/welcome.md";
 import bye from "@/pages/bye.md";
 
@@ -24,12 +25,12 @@ export default class HelloWorld extends Vue {
 
   showWelcome() {
     console.log("welcome");
-    this.md = md.render(welcome);
+    this.md = remarkable.render(welcome);
     console.log(this.md);
   }
   showBye() {
     console.log("welcome");
-    this.md = md.render(bye);
+    this.md = marked(bye);
     console.log(this.md);
   }
 
@@ -41,7 +42,7 @@ export default class HelloWorld extends Vue {
     console.log(request);
     const file = await request.text();
     console.log(file);
-    this.md = md.render(file);
+    this.md = remarkable.render(file);
   }
 }
 </script>

@@ -37,3 +37,5 @@ npm run lint
 Configuration of Webpack to use this loader is required (see vue.config.js and shims-vue.d.ts)
 
 #### [remarkable](https://www.npmjs.com/package/remarkable)
+
+#### [marked](https://www.npmjs.com/package/marked)
